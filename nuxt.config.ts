@@ -38,12 +38,12 @@ export default defineNuxtConfig({
     minify: process.env.NODE_ENV === 'production',
     storage: {
       kv: {
-        // driver: process.env.NITRO_KV_DRIVER || 'memory',
-        // base: process.env.NITRO_KV_BASE,
+        driver: process.env.NITRO_KV_DRIVER || 'memory',
+        base: process.env.NITRO_KV_BASE,
         // 直接写死驱动，不再通过 process.env 读取，排除环境变量没传进去的可能
-        driver: 'cloudflare-kv-binding', 
+        //driver: 'cloudflare-kv-binding', 
         // 显式指定绑定名称为大写的 KV
-        binding: 'KV',
+        //binding: 'KV',
       },
     },
   },
